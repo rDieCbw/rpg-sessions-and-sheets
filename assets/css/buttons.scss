@@ -1,0 +1,39 @@
+$colors-list: "primary", "secondary", "tertiary";
+$bg-colors: () !default;
+$bg-colors: map-merge((
+    "primary": #00c58e,
+    "secondary": #2f485e,
+    "tertiary": #0f8774,
+),$bg-colors);
+
+$text-colors: () !default;
+$text-colors: map-merge((
+    "primary": white,
+    "secondary": white,
+    "tertiary": white,
+),$text-colors);
+
+.btn{
+    padding: 10px 14px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    font-size: 18px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    @each $current in $colors-list {
+        &.#{$current} {
+            background-color: map-get($bg-colors, #{$current}) !important;
+            border-color: map-get($bg-colors, #{$current}) !important;
+            color: map-get($text-colors, #{$current}) !important;
+
+            &-outline {
+                background-color: transparent !important;
+                color: map-get($bg-colors, #{$current}) !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+#home{
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        h1{
+            font-size: 51px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            margin: 0;
+        }
+        h2 {
+            font-size: 32px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            margin: 0 0 32px;
+        }
+    }
+}
